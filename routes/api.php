@@ -19,11 +19,11 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+*/
 Route::prefix('book')->group(function(){
     Route::get('index',[BookController::class,'index']);
     Route::post('store',[BookController::class,'store']);
     Route::put('update/{id}',[BookController::class,'update']);
     Route::get('getById/{id}',[BookController::class,'getById']);
 });
-*/
+
